@@ -96,24 +96,25 @@ exports.TextField = class TextField extends Type.Regular
 
 		@_input = document.createElement(@_inputType, {'autofocus': false})
 		@inputLayer._element.appendChild(@_input)
-		
+
 		@_input.spellcheck 		= false
 		@_input.autocapitalize  = false
 		@_input.autocomplete 	= false
+		@_input.type = options.type ? 'text'
 
 		if @_inputMode?   then @setInputAttribute('inputmode', @_inputMode)
 		if @_maxLength?   then @setInputAttribute('maxlength', @_maxLength)
 		if @_readOnly? 	  then @setInputAttribute('readonly',  @_readOnly )
 
 		Utils.insertCSS( """
-			*:focus { outline: 0; }
-			textarea { resize: none; } 
-			::selection { background: #{@selectionColor}; } 
+			*:focus { outline: none !important; outline-style: none !important; box-shadow: none !important; border-color: transparent !important;}
+			textarea { resize: none; }
+			::selection { background: #{@selectionColor}; }
 			""" )
 
-		
+
 		@setStyle()
-		
+
 
 		# Event Listeners
 
@@ -263,11 +264,14 @@ exports.TextField = class TextField extends Type.Regular
 			resize: none;
 			width: #{@width}px;
 			padding: #{@padding.top}px #{@padding.right}px #{@padding.bottom}px #{@padding.left}px;
-			outline: 0px none transparent !important;
+			outline: none !important;
+			outline-style: none !important;
+			box-shadow: none !important;
+			border-color: transparent !important;
 			line-height: #{@lineHeight};
 			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-			box-sizing: border-box; 
+			box-sizing: border-box;
 		"""
 
 	# set individual attribute of textarea
