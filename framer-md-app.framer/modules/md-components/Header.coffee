@@ -5,11 +5,11 @@
 # 88     88  88.  ... 88.  .88 88.  .88 88.  ... 88      
 # dP     dP  `88888P' `88888P8 `88888P8 `88888P' dP    
 
-Type = require 'md-components/Type'
-{ Icon } = require 'md-components/Icon'
-{ Theme } = require 'md-components/Theme'
-{ modifyColor } = require 'md-components/Theme'
-{ StatusBar } = require 'md-components/StatusBar'
+Type = require './Type.coffee'
+{ Icon } = require './Icon.coffee'
+{ Theme } = require './Theme.coffee'
+{ modifyColor } = require './Theme.coffee'
+{ StatusBar } = require './StatusBar.coffee'
 
 exports.Header = class Header extends Layer
 	constructor: (options = {}) ->

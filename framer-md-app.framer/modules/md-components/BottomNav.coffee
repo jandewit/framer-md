@@ -5,10 +5,10 @@
 # 	 88    .88 88.  .88   88     88   88.  .88 88  88  88 88     88 88.  .88 88 .88'
 # 	 88888888P `88888P'   dP     dP   `88888P' dP  dP  dP dP     dP `88888P8 8888P'
 
-Type = require 'md-components/Type'
-{ Ripple } = require 'md-components/Ripple'
-{ Icon } = require 'md-components/Icon'
-{ Theme } = require 'md-components/Theme'
+Type = require './Type.coffee'
+{ Ripple } = require './Ripple.coffee'
+{ Icon } = require './Icon.coffee'
+{ Theme } = require './Theme.coffee'
 
 exports.BottomNav = class BottomNav extends Layer
 	constructor: (options = {}) ->

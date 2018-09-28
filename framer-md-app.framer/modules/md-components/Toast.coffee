@@ -5,17 +5,17 @@
 # 	   88    88.  .88 88.  .88       88   88
 # 	   dP    `88888P' `88888P8 `88888P'   dP
 
-Type = require 'md-components/Type'
-{ Ripple } = require 'md-components/Ripple'
-{ Theme } = require 'md-components/Theme'
-{ Button } = require 'md-components/Button'
+Type = require './Type.coffee'
+{ Ripple } = require './Ripple.coffee'
+{ Theme } = require './Theme.coffee'
+{ Button } = require './Button.coffee'
 
 # currently identical to snackbar
 
 class exports.Toast extends Layer
 	constructor: (options = {}) ->
 
-		{ app } = require 'md-components/App'
+		{ app } = require './App.coffee'
 		@_app = app
 
 		@_title = options.title ? 'Toast'

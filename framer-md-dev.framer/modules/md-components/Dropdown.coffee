@@ -8,10 +8,10 @@
 # 	                            88
 # 	                            dP
 
-Type = require 'md-components/Type'
-{ Theme } = require 'md-components/Theme'
-{ Icon } = require 'md-components/Icon'
-{ Ripple } = require 'md-components/Ripple'
+Type = require './Type.coffee'
+{ Theme } = require './Theme.coffee'
+{ Icon } = require './Icon.coffee'
+{ Ripple } = require './Ripple.coffee'
 
 # Bugs:
 

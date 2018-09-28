@@ -5,9 +5,9 @@
 # 	88     88  88.  ...   88   88 88.  .88 88    88  88    .88 88.  .88   88     88   88.  .88 88    88
 # 	88     88  `88888P'   dP   dP `88888P' dP    dP  88888888P `88888P'   dP     dP   `88888P' dP    dP
 
-{ Ripple } = require 'md-components/Ripple'
-{ Icon } = require 'md-components/Icon'
-{ Theme } = require 'md-components/Theme'
+{ Ripple } = require './Ripple.coffee'
+{ Icon } = require './Icon.coffee'
+{ Theme } = require './Theme.coffee'
 
 exports.ActionButton = class ActionButton extends Layer 
 	constructor: (options = {}) ->
@@ -15,7 +15,7 @@ exports.ActionButton = class ActionButton extends Layer
 		@_action = options.action ? -> null
 		@_icon = options.icon ? 'plus'
 
-		{ app } = require 'md-components/App'
+		{ app } = require './App.coffee'
 
 		super _.defaults options,
 			name: 'Action Button'

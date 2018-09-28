@@ -11,14 +11,14 @@
 # simplify header controls
 # remove template(?)
 
-{ Theme } = require 'md-components/Theme'
-{ StackView } = require 'md-components/StackView'
+{ Theme } = require './Theme.coffee'
+{ StackView } = require './StackView.coffee'
 
 exports.Page = class Page extends StackView
 	constructor: (options = {}) ->
 		@__constructor = true
 
-		{ app } = require 'md-components/App'
+		{ app } = require './App.coffee'
 
 		options.icon ?= 'arrow-left'
 		options.action ?= -> app.showPrevious()

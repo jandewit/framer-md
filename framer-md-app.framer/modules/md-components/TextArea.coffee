@@ -1,6 +1,6 @@
-Type = require 'md-components/Type'
-{ Theme } = require 'md-components/Theme'
-{ TextField } = require 'md-components/TextField'
+Type = require './Type.coffee'
+{ Theme } = require './Theme.coffee'
+{ TextField } = require './TextField.coffee'
 
 
 # 	d888888P                     dP    .d888888

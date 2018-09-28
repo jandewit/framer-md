@@ -7,10 +7,10 @@
 # 	           88       88
 # 	           dP       dP
 
-{ Header } = require 'md-components/Header'
-{ BottomNav } = require 'md-components/BottomNav'
-{ MenuOverlay } = require 'md-components/MenuOverlay'
-{ Theme } = require 'md-components/Theme'
+{ Header } = require './Header.coffee'
+{ BottomNav } = require './BottomNav.coffee'
+{ MenuOverlay } = require './MenuOverlay.coffee'
+{ Theme } = require './Theme.coffee'
 
 exports.app # set by class
 

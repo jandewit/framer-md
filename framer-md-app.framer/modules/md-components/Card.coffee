@@ -5,13 +5,13 @@
 # 	Y8.   .88 88.  .88 88       88.  .88
 # 	 Y88888P' `88888P8 dP       `88888P8
 
-Type = require 'md-components/Type'
-{ Ripple } = require 'md-components/Ripple'
-{ Icon } = require 'md-components/Icon'
-{ Theme } = require 'md-components/Theme'
-{ Divider } = require 'md-components/Divider'
-{ Button } = require 'md-components/Button'
-{ Elevation } = require 'md-components/Elevation'
+Type = require './Type.coffee'
+{ Ripple } = require './Ripple.coffee'
+{ Icon } = require './Icon.coffee'
+{ Theme } = require './Theme.coffee'
+{ Divider } = require './Divider.coffee'
+{ Button } = require './Button.coffee'
+{ Elevation } = require './Elevation.coffee'
 
 exports.Card = class Card extends Layer
 	constructor: (options = {}) ->

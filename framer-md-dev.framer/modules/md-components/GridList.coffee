@@ -6,10 +6,10 @@
 # 	Y8.   .88 88       88 88.  .88 88        88       88   88
 # 	 `88888'  dP       dP `88888P8 88888888P dP `88888P'   dP
 
-Type = require 'md-components/Type'
-{ Ripple } = require 'md-components/Ripple'
-{ Icon } = require 'md-components/Icon'
-{ Theme } = require 'md-components/Theme'
+Type = require './Type.coffee'
+{ Ripple } = require './Ripple.coffee'
+{ Icon } = require './Icon.coffee'
+{ Theme } = require './Theme.coffee'
 
 exports.GridList = class GridList extends Layer
 	constructor: (options = {}) ->

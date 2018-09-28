@@ -5,15 +5,15 @@
 # 	d8'   .8P 88    88 88.  .88 88.  ... 88  `8b. 88.  .88 88.  .88 88
 # 	 Y88888P  dP    dP `88888P8 `88888P' dP   `YP 88Y8888' `88888P8 dP
 
-Type = require 'md-components/Type'
-{ Ripple } = require 'md-components/Ripple'
-{ Theme } = require 'md-components/Theme'
-{ Button } = require 'md-components/Button'
+Type = require './Type.coffee'
+{ Ripple } = require './Ripple.coffee'
+{ Theme } = require './Theme.coffee'
+{ Button } = require './Button.coffee'
 
 class exports.Snackbar extends Layer
 	constructor: (options = {}) ->
 
-		{ app } = require 'md-components/App'
+		{ app } = require './App.coffee'
 		@_app = app
 
 		@_title = options.title ? 'Snackbar'

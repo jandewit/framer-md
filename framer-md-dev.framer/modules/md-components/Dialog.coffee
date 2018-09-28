@@ -7,10 +7,10 @@
 # 	                                       .88
 # 	                                   d8888P
 
-Type = require 'md-components/Type'
-{ Icon } = require 'md-components/Icon'
-{ Theme } = require 'md-components/Theme'
-{ Button } = require 'md-components/Button'
+Type = require './Type.coffee'
+{ Icon } = require './Icon.coffee'
+{ Theme } = require './Theme.coffee'
+{ Button } = require './Button.coffee'
 
 # simplify: create an actions array, with text, action, color?
 # this needs to be standardized across apis

@@ -5,8 +5,8 @@
 # 	Y8.   .88 88    88 88.  ... 88.  ... 88  `8b. 88.  .88 88.  .88  .d88b.
 # 	 Y88888P' dP    dP `88888P' `88888P' dP   `YP 88Y8888' `88888P' dP'  `dP
 
-{ Icon } = require 'md-components/Icon'
-{ Theme } = require 'md-components/Theme'
+{ Icon } = require './Icon.coffee'
+{ Theme } = require './Theme.coffee'
 
 exports.Checkbox = CheckBox = class Checkbox extends Icon
 	constructor: (options = {}) ->

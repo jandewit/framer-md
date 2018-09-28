@@ -5,16 +5,16 @@
 # 	88   88   88 88.  ... 88    88 88.  .88  88    .88 88.  .88   88     88   88.  .88 88    88
 # 	dP   dP   dP `88888P' dP    dP `88888P'  88888888P `88888P'   dP     dP   `88888P' dP    dP
 
-Type = require 'md-components/Type'
-{ Ripple } = require 'md-components/Ripple'
-{ Icon } = require 'md-components/Icon'
-{ Theme } = require 'md-components/Theme'
+Type = require './Type.coffee'
+{ Ripple } = require './Ripple.coffee'
+{ Icon } = require './Icon.coffee'
+{ Theme } = require './Theme.coffee'
 
 
 exports.MenuButton = class MenuButton extends Layer
 	constructor: (options = {}) ->
 
-		{ app } = require 'md-components/App'
+		{ app } = require './App.coffee'
 		
 		@_icon = options.icon ? 'home'
 		@_text = options.text ? 'Default'

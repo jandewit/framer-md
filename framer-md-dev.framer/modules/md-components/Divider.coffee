@@ -5,8 +5,8 @@
 # 	88    .8P 88 88 .88'  88 88.  .88 88.  ... 88
 # 	8888888P  dP 8888P'   dP `88888P8 `88888P' dP
 
-Type = require 'md-components/Type'
-{ Theme } = require 'md-components/Theme'
+Type = require './Type.coffee'
+{ Theme } = require './Theme.coffee'
 
 class exports.Divider extends Layer
 	constructor: (options = {}) ->

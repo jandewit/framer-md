@@ -1,8 +1,8 @@
-Type = require 'md-components/Type'
-{ Theme } = require 'md-components/Theme'
-{ TextField } = require 'md-components/TextField'
-{ Dropdown } = require 'md-components/Dropdown'
-{ Icon } = require 'md-components/Icon'
+Type = require './Type.coffee'
+{ Theme } = require './Theme.coffee'
+{ TextField } = require './TextField.coffee'
+{ Dropdown } = require './Dropdown.coffee'
+{ Icon } = require './Icon.coffee'
 
 
 # 	.d88888b           dP                     dP

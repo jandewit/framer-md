@@ -9,15 +9,15 @@
 
 # TODO: replace action1 and action2 with array of actions.
 
-Type = require 'md-components/Type'
-{ Icon } = require 'md-components/Icon'
-{ Theme } = require 'md-components/Theme'
-{ Divider } = require 'md-components/Divider' 
+Type = require './Type.coffee'
+{ Icon } = require './Icon.coffee'
+{ Theme } = require './Theme.coffee'
+{ Divider } = require './Divider.coffee' 
 
 exports.Notification = Notification = class Notification extends Layer
 	constructor: (options = {}) ->
 
-		{ app } = require 'md-components/App'
+		{ app } = require './App.coffee'
 
 		@_title = options.title ? 'Notification'
 		@_body = options.body ? 'This is a notification.'

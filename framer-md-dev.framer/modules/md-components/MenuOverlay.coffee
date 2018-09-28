@@ -7,11 +7,11 @@
 #                                                                                               .88
 #                                                                                           d8888P 
 
-Type = require 'md-components/Type'
-{ Ripple } = require 'md-components/Ripple'
-{ Icon } = require 'md-components/Icon'
-{ Theme } = require 'md-components/Theme'
-{ MenuButton } = require 'md-components/MenuButton'
+Type = require './Type.coffee'
+{ Ripple } = require './Ripple.coffee'
+{ Icon } = require './Icon.coffee'
+{ Theme } = require './Theme.coffee'
+{ MenuButton } = require './MenuButton.coffee'
 
 exports.MenuOverlay = class MenuOverlay extends Layer
 	constructor: (options = {}) ->

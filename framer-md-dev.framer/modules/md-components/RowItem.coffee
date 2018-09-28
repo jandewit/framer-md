@@ -5,9 +5,9 @@
 #  88     88 88.  .88 88.88b.88' 88   88   88.  ... 88  88  88
 #  dP     dP `88888P' 8888P Y8P  dP   dP   `88888P' dP  dP  dP
 
-Type = require 'md-components/Type'
-{ Theme } = require 'md-components/Theme'
-{ Divider } = require 'md-components/Divider' 
+Type = require './Type.coffee'
+{ Theme } = require './Theme.coffee'
+{ Divider } = require './Divider.coffee' 
 
 
 exports.RowItem = class RowItem extends Layer

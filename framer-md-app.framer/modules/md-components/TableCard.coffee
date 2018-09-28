@@ -5,11 +5,11 @@
 # 	88     88  88.  ... 88.  .88 88.  .88 88.  ... 88       Y8.   .88 88.  .88 88    88   88   88       88.  .88 88       88
 # 	dP     dP  `88888P' `88888P8 `88888P8 `88888P' dP        Y88888P' `88888P' dP    dP   dP   dP       `88888P' dP `88888P'
 
-{ Icon } = require 'md-components/Icon'
-{ Theme } = require 'md-components/Theme'
-{ Checkbox } = require 'md-components/Checkbox'
-{ Card } = require 'md-components/Card'
-{ Button } = require 'md-components/Button'
+{ Icon } = require './Icon.coffee'
+{ Theme } = require './Theme.coffee'
+{ Checkbox } = require './Checkbox.coffee'
+{ Card } = require './Card.coffee'
+{ Button } = require './Button.coffee'
 
 class HeaderControls extends Layer
 	constructor: (options = {}) ->

@@ -5,9 +5,9 @@
 # 	88     88  88.  ... 88.  .88 88.  .88 88.  ... 88
 # 	dP     dP  `88888P' `88888P8 `88888P8 `88888P' dP
 
-{ Icon } = require 'md-components/Icon'
-{ Theme } = require 'md-components/Theme'
-{ Checkbox } = require 'md-components/Checkbox'
+{ Icon } = require './Icon.coffee'
+{ Theme } = require './Theme.coffee'
+{ Checkbox } = require './Checkbox.coffee'
 
 class Header extends TextLayer
 	constructor: (options = {}) ->

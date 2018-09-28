@@ -6,10 +6,10 @@
 # 	d8'   .8P 88.88b.88' 88   88   88.  ... 88    88
 # 	 Y88888P  8888P Y8P  dP   dP   `88888P' dP    dP
 
-Type = require 'md-components/Type'
-{ Ripple } = require 'md-components/Ripple'
-{ Icon } = require 'md-components/Icon'
-{ Theme } = require 'md-components/Theme'
+Type = require './Type.coffee'
+{ Ripple } = require './Ripple.coffee'
+{ Icon } = require './Icon.coffee'
+{ Theme } = require './Theme.coffee'
 
 exports.Switch = class Switch extends Layer
 	constructor: (options = {}) ->

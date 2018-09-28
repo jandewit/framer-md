@@ -5,10 +5,10 @@
 # 	   88    88 88 88.  ...
 # 	   dP    dP dP `88888P'
 
-Type = require 'md-components/Type'
-{ Ripple } = require 'md-components/Ripple'
-{ Icon } = require 'md-components/Icon'
-{ Theme } = require 'md-components/Theme'
+Type = require './Type.coffee'
+{ Ripple } = require './Ripple.coffee'
+{ Icon } = require './Icon.coffee'
+{ Theme } = require './Theme.coffee'
 
 exports.Tile = Tile = class Tile extends Layer
 	constructor: (options = {}) ->

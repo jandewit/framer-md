@@ -6,8 +6,8 @@
 # 	 dP     dP `88888P8 `88888P8 dP `88888P' 88Y8888' `88888P' dP'  `dP
 
 
-{ Icon } = require 'md-components/Icon'
-{ Theme } = require 'md-components/Theme'
+{ Icon } = require './Icon.coffee'
+{ Theme } = require './Theme.coffee'
 
 exports.Radiobox = Radiobox = class Radiobox extends Icon
 	constructor: (options = {}) ->

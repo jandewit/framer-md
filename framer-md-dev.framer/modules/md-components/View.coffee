@@ -7,13 +7,13 @@
 
 # Works without an app, but will integrate with app if set with options.app.
 
-{ Theme } = require 'md-components/Theme'
-{ Page } = require 'md-components/Page'
+{ Theme } = require './Theme.coffee'
+{ Page } = require './Page.coffee'
 
 exports.View = class View extends Page
 	constructor: (options = {}) ->
 		
-		{ app } = require 'md-components/App'
+		{ app } = require './App.coffee'
 
 		@_icon = options.icon ? 'open-in-new'
 		

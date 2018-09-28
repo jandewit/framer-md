@@ -1,4 +1,4 @@
-Theme = require 'md-components/Theme'
+Theme = require './Theme.coffee'
 
 # 	d888888P                                                                dP
 # 	   88                                                                   88
