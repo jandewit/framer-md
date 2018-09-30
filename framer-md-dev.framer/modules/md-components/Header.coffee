@@ -16,12 +16,12 @@ exports.Header = class Header extends Layer
 		@__constructor = true
 
 		# properties
-		
+
 		@_title
 		options.title ?= 'Header'
 
 		@_icon
-		options.icon ?= 'menu'
+		options.icon ?= ''
 
 		@_action
 		options.action ?= -> null
@@ -51,9 +51,9 @@ exports.Header = class Header extends Layer
 		# icon
 
 		@iconLayer = new Icon
-			name: '.', parent: @, 
+			name: '.', parent: @,
 			x: 12, y: Align.center(12)
-			icon: options.icon ? 'menu'
+			icon: options.icon ? ''
 			color: @color
 
 		# status bar
@@ -101,10 +101,11 @@ exports.Header = class Header extends Layer
 			return if @__constructor
 			@_title = titleText
 			@titleLayer.text = titleText
+			@titleLayer.width += 10
 
 	@define "icon",
 		get: -> return @_icon
-		set: (iconName) -> 
+		set: (iconName) ->
 			return if @__constructor
 			@_icon = iconName
 			@iconLayer.icon = iconName
