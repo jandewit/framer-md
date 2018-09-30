@@ -57,22 +57,22 @@ exports.TextField = class TextField extends Type.Regular
 			text: '{placeholder}'
 
 		@template = @_placeholder
-		
+
 
 		# Label Text
 
 		@labelTextLayer = new Type.Regular
 			name: 'LabelTextLayer', parent: @
-			x: 0, y: 22
+			x: 0, y: 22, width: @width
 			animationOptions: @animationOptions
 			text: "{labelText}"
-		
+
 
 		# Helper Text
 
 		@helperTextLayer = new Type.Caption
 			name: 'Helper Text', parent: @
-			x: 0, y: Align.bottom
+			x: 0, y: Align.bottom, width: @width
 			animationOptions: @animationOptions
 			text: "{helper}"
 
@@ -134,13 +134,14 @@ exports.TextField = class TextField extends Type.Regular
 		@helperTextColor = options.helperTextColor
 		@focused = options.focused
 		@value = options.value
+		@borderColor = options.borderColor ? 'rgba(0, 0, 0, .42)'
 
 		if @parent?.name is "content"
 			@scrollLayer = @parent.parent
 			@scrollLayer?.onScrollStart => @disabled = true
 			@scrollLayer?.onScrollEnd => @disabled = false
-	
-	setScroll: (scroll) => 
+
+	setScroll: (scroll) =>
 		@scrollLayer?.scrollVertical = scroll
 		@_input.readonly = scroll
 
@@ -192,11 +193,11 @@ exports.TextField = class TextField extends Type.Regular
 			@inputLine?.animate
 				height: 1
 				backgroundColor: 'rgba(0, 0, 0, .42)'
-			
+
 			if @_inputType is 'textarea'
 				@animate
 					borderWidth: 1
-					borderColor: 'rgba(0, 0, 0, .42)'
+					borderColor: @borderColor
 
 			if @_app?.focused is @
 				@_app?.focused = undefined
@@ -282,8 +283,9 @@ exports.TextField = class TextField extends Type.Regular
 		get: -> return @_value
 		set: (value) ->
 			return if @_value is value
-			
+
 			@_value = value
+			@_input.value = value
 
 			@matches = @pattern(value)
 			@emit("change:value", @value, @matches, @)
