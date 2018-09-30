@@ -25,11 +25,11 @@ exports.Button = class Button extends Layer
 		@_disabled
 		@_action
 		@_raised
-		@_type 
+		@_type
 		@_base
 		@_labelText
 
-		@_explicitWidth = options.width?
+		@_explicitWidth = options.width
 		@_startX = options.x
 
 		@_type = options.type ? if options.raised then 'raised' else 'flat'
@@ -40,7 +40,7 @@ exports.Button = class Button extends Layer
 				@_base =
 					name: 'Flat Button'
 					height: 36
-					width: 999
+					width: options.width
 					borderRadius: 2
 					backgroundColor: null
 					color: Theme.colors.secondary.main
@@ -52,7 +52,7 @@ exports.Button = class Button extends Layer
 				@_base =
 					name: 'Raised Button'
 					height: 36
-					width: 999
+					width: options.width
 					borderRadius: 2
 					backgroundColor: Theme.colors.secondary.main
 					color: Theme.colors.secondary.text
@@ -68,20 +68,23 @@ exports.Button = class Button extends Layer
 			name: if showLayers then 'Label' else '.'
 			parent: @
 			height: 36
+			width: options.width
 			text: '{labelText}'
 			textTransform: 'uppercase'
 			textAlign: 'center'
 			color: @color
 			animationOptions: {time: .15}
-			padding: 
+			padding:
 				left: 16.5, right: 16.5
 				top: 9, bottom: 11
-		
+
+		@setRipple()
+
 		# events
 		@onTapStart ->
 			@showRaised()
 
-		@onTapEnd -> 
+		@onTapEnd ->
 			return if @_disabled
 			@_action()
 			@refresh()
