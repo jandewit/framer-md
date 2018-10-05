@@ -101,7 +101,7 @@ exports.Header = class Header extends Layer
 			return if @__constructor
 			@_title = titleText
 			@titleLayer.text = titleText
-			@titleLayer.width += 10
+			@titleLayer.width = titleText.length * 12
 
 	@define "icon",
 		get: -> return @_icon
